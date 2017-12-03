@@ -14,11 +14,5 @@
             </column>
         </createTable>
     </changeSet>
-    <!--
-    <changeSet id="1.2" author="Neto">
-        <addColumn tableName="editora">
-            <column name="ativo" type="boolean"/>
-        </addColumn>
-    </changeSet>
-    -->
+    
 </databaseChangeLog>
