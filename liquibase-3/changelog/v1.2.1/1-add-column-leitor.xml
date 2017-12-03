@@ -1,0 +1,15 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    
+    <changeSet id="20171203-1530" author="Neto">
+        <sql>ALTER TABLE leitor ADD COLUMN telefone VARCHAR(20)</sql>
+    </changeSet>
+
+    <changeSet id="20171203-1531" author="Neto">
+        <sql>ALTER TABLE leitor ADD COLUMN email VARCHAR(100)</sql>
+    </changeSet>
+    
+</databaseChangeLog>

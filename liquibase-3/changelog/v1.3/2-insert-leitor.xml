@@ -1,0 +1,19 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="20171203-1540" author="Neto">
+        <insert tableName="leitor">
+            <column name="id" value="1"/>
+            <column name="nome" value="Alexandre Silveira Neto"/>
+            <column name="telefone" value="+55 51 98310.4560"/>
+            <column name="email" value="alexandresilveira@cwi.com.br"/>
+        </insert>
+        <rollback>
+            DELETE FROM leitor WHERE id=1
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
