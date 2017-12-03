@@ -5,7 +5,7 @@ docker run -d \
     -e DB_NAME=biblioteca \
     -e DB_USER=biblioteca \
     -e DB_PASS=biblioteca \
-    -p 5552:5432 --name biblioteca-db postgres-db
+    -p 5552:5432 --name biblioteca-db alexandresneto/postgres-db
 ```
 
 ## Fazer download do Liquibase 
