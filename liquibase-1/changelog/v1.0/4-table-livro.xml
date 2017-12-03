@@ -1,0 +1,42 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="20171120-2030" author="Neto">
+        <createTable tableName="livro">
+            <column name="id" type="int">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="titulo" type="varchar(200)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="edicao" type="int"/>
+            <column name="ano_publicacao" type="int"/>
+            <column name="id_autor" type="int"/>
+            <column name="id_editora" type="int"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20171120-2031" author="Neto">
+        <addForeignKeyConstraint baseColumnNames="id_autor"
+                baseTableName="livro"
+                constraintName="fk_livro_autor"
+                deferrable="true"
+                initiallyDeferred="true"
+                referencedColumnNames="id"
+                referencedTableName="autor"/>
+    </changeSet>
+
+    <changeSet id="20171120-2032" author="Neto">
+        <addForeignKeyConstraint baseColumnNames="id_editora"
+                baseTableName="livro"
+                constraintName="fk_livro_editora"
+                deferrable="true"
+                initiallyDeferred="true"
+                referencedColumnNames="id"
+                referencedTableName="editora"/>
+    </changeSet>
+
+</databaseChangeLog>
